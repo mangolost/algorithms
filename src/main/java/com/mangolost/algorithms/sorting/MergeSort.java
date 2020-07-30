@@ -8,11 +8,17 @@ import java.util.Arrays;
  */
 public class MergeSort<T> implements Sort<T> {
 
+    public MergeSort() {
+
+    }
+
     private Comparable<T>[] aux;
 
     /**
      * @param a
      */
+    @SuppressWarnings("unchecked")
+    @Override
     public void sort(Comparable<T>[] a) {
         aux = new Comparable[a.length];
         int len = a.length;
@@ -42,7 +48,7 @@ public class MergeSort<T> implements Sort<T> {
      * @param mid
      * @param right
      */
-    private void merge(Comparable[] a, int left, int mid, int right) {
+    private void merge(Comparable<T>[] a, int left, int mid, int right) {
         // Merge a[left..mid] with a[mid+1..right].
         if (right + 1 - left >= 0) {
             System.arraycopy(a, left, aux, left, right + 1 - left);

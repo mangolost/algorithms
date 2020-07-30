@@ -8,9 +8,14 @@ import java.util.Arrays;
  */
 public class InsertionSort<T> implements Sort<T> {
 
+    public InsertionSort() {
+
+    }
+
     /**
      * @param a
      */
+    @Override
     public void sort(Comparable<T>[] a) {
         int len = a.length;
         for (int i = 1; i < len; i++) {

@@ -11,6 +11,7 @@ public class SelectionSort<T> implements Sort<T> {
     /**
      * @param a
      */
+    @Override
     public void sort(Comparable<T>[] a) {
         int len = a.length;
         for (int i = 0; i < len; i++) {

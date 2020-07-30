@@ -11,6 +11,7 @@ public class QuickSort<T> implements Sort<T> {
     /**
      * @param a
      */
+    @Override
     public void sort(Comparable<T>[] a) {
         int len = a.length;
         quickSort(a, 0, len - 1);

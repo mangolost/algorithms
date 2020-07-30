@@ -8,9 +8,14 @@ import java.util.Arrays;
  */
 public class BubbleSort<T> implements Sort<T> {
 
+    public BubbleSort() {
+
+    }
+
     /**
      * @param a
      */
+    @Override
     public void sort(Comparable<T>[] a) {
         int len = a.length;
         for (int i = 0; i < len - 1; i++) {
