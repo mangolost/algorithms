@@ -1,19 +1,16 @@
 package com.mangolost.algorithms.sorting;
 
 /**
- *
  * @param <T>
  */
 public interface Sort<T> {
 
     /**
-     *
      * @param a
      */
     void sort(Comparable<T>[] a);
 
     /**
-     *
      * @param a
      * @param b
      * @return
@@ -24,7 +21,6 @@ public interface Sort<T> {
     }
 
     /**
-     *
      * @param a
      * @param i
      * @param j

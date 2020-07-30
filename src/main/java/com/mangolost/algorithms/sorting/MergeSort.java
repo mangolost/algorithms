@@ -4,15 +4,26 @@ import java.util.Arrays;
 
 /**
  * 归并排序
+ *
  * @param <T>
  */
 public class MergeSort<T> implements Sort<T> {
+
+    private Comparable<T>[] aux;
 
     public MergeSort() {
 
     }
 
-    private Comparable<T>[] aux;
+    public static void main(String[] args) {
+        Sort<Integer> sort = new MergeSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
+    }
 
     /**
      * @param a
@@ -26,7 +37,7 @@ public class MergeSort<T> implements Sort<T> {
     }
 
     /**
-     *  @param a
+     * @param a
      * @param left
      * @param right
      * @return
@@ -42,7 +53,6 @@ public class MergeSort<T> implements Sort<T> {
     }
 
     /**
-     *
      * @param a
      * @param left
      * @param mid
@@ -69,16 +79,6 @@ public class MergeSort<T> implements Sort<T> {
                 i++;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        Sort<Integer> sort = new MergeSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
     }
 
 }

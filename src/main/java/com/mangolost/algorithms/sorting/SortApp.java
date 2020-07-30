@@ -3,7 +3,6 @@ package com.mangolost.algorithms.sorting;
 import java.util.Arrays;
 
 /**
- *
  * @param <T>
  */
 public class SortApp<T> {
@@ -12,24 +11,6 @@ public class SortApp<T> {
 
     public SortApp(Sort<T> sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
-    }
-
-    /**
-     * @param a
-     */
-    @SuppressWarnings("unchecked")
-    private void sort(Comparable<T>[] a) {
-        Comparable<T>[] x = new Comparable[a.length];
-        System.arraycopy(a, 0, x, 0, a.length);
-        sortAlgorithm.sort(x);
-        print(x);
-    }
-
-    /**
-     * @param a
-     */
-    private void print(Comparable<T>[] a) {
-        System.out.println(Arrays.toString(a));
     }
 
     public static void main(String[] args) {
@@ -57,6 +38,24 @@ public class SortApp<T> {
         SortApp<Integer> sortApp7 = new SortApp<>(new HeapSort<>());
         sortApp7.sort(a);
 
+    }
+
+    /**
+     * @param a
+     */
+    @SuppressWarnings("unchecked")
+    private void sort(Comparable<T>[] a) {
+        Comparable<T>[] x = new Comparable[a.length];
+        System.arraycopy(a, 0, x, 0, a.length);
+        sortAlgorithm.sort(x);
+        print(x);
+    }
+
+    /**
+     * @param a
+     */
+    private void print(Comparable<T>[] a) {
+        System.out.println(Arrays.toString(a));
     }
 
 
