@@ -13,6 +13,24 @@ public class SortApp<T> {
         this.sortAlgorithm = sortAlgorithm;
     }
 
+    /**
+     * @param a
+     */
+    @SuppressWarnings("unchecked")
+    private void sort(Comparable<T>[] a) {
+        Comparable<T>[] x = new Comparable[a.length];
+        System.arraycopy(a, 0, x, 0, a.length);
+        sortAlgorithm.sort(x);
+        print(x);
+    }
+
+    /**
+     * @param a
+     */
+    private void print(Comparable<T>[] a) {
+        System.out.println(Arrays.toString(a));
+    }
+
     public static void main(String[] args) {
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
@@ -39,24 +57,5 @@ public class SortApp<T> {
         sortApp7.sort(a);
 
     }
-
-    /**
-     * @param a
-     */
-    @SuppressWarnings("unchecked")
-    private void sort(Comparable<T>[] a) {
-        Comparable<T>[] x = new Comparable[a.length];
-        System.arraycopy(a, 0, x, 0, a.length);
-        sortAlgorithm.sort(x);
-        print(x);
-    }
-
-    /**
-     * @param a
-     */
-    private void print(Comparable<T>[] a) {
-        System.out.println(Arrays.toString(a));
-    }
-
 
 }

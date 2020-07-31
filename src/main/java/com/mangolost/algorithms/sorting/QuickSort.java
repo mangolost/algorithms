@@ -9,16 +9,6 @@ import java.util.Arrays;
  */
 public class QuickSort<T> implements Sort<T> {
 
-    public static void main(String[] args) {
-        Sort<Integer> sort = new QuickSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
-    }
-
     /**
      * @param a
      */
@@ -73,6 +63,16 @@ public class QuickSort<T> implements Sort<T> {
         }
         swap(a, left, j);
         return j;
+    }
+
+    public static void main(String[] args) {
+        Sort<Integer> sort = new QuickSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
     }
 
 }

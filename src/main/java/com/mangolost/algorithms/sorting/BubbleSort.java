@@ -9,20 +9,6 @@ import java.util.Arrays;
  */
 public class BubbleSort<T> implements Sort<T> {
 
-    public BubbleSort() {
-
-    }
-
-    public static void main(String[] args) {
-        Sort<Integer> sort = new BubbleSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
-    }
-
     /**
      * @param a
      */
@@ -36,6 +22,16 @@ public class BubbleSort<T> implements Sort<T> {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Sort<Integer> sort = new BubbleSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
     }
 
 }

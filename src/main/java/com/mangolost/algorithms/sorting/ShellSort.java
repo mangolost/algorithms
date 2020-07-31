@@ -9,20 +9,6 @@ import java.util.Arrays;
  */
 public class ShellSort<T> implements Sort<T> {
 
-    public ShellSort() {
-
-    }
-
-    public static void main(String[] args) {
-        Sort<Integer> sort = new ShellSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
-    }
-
     /**
      * @param a
      */
@@ -43,6 +29,16 @@ public class ShellSort<T> implements Sort<T> {
             }
             h = h / 3;
         }
+    }
+
+    public static void main(String[] args) {
+        Sort<Integer> sort = new ShellSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
     }
 
 }

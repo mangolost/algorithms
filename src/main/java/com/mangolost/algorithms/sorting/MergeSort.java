@@ -11,20 +11,6 @@ public class MergeSort<T> implements Sort<T> {
 
     private Comparable<T>[] aux;
 
-    public MergeSort() {
-
-    }
-
-    public static void main(String[] args) {
-        Sort<Integer> sort = new MergeSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
-    }
-
     /**
      * @param a
      */
@@ -79,6 +65,16 @@ public class MergeSort<T> implements Sort<T> {
                 i++;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Sort<Integer> sort = new MergeSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
     }
 
 }

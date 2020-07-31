@@ -9,20 +9,6 @@ import java.util.Arrays;
  */
 public class HeapSort<T> implements Sort<T> {
 
-    public HeapSort() {
-
-    }
-
-    public static void main(String[] args) {
-        Sort<Integer> sort = new HeapSort<>();
-
-        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
-
-        sort.sort(a);
-
-        System.out.println(Arrays.toString(a));
-    }
-
     /**
      * @param a
      */
@@ -56,6 +42,16 @@ public class HeapSort<T> implements Sort<T> {
             swap(a, i - 1, j - 1);
             i = j;
         }
+    }
+
+    public static void main(String[] args) {
+        Sort<Integer> sort = new HeapSort<>();
+
+        Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
+
+        sort.sort(a);
+
+        System.out.println(Arrays.toString(a));
     }
 
 }
