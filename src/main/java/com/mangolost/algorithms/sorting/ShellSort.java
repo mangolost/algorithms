@@ -5,15 +5,14 @@ import java.util.Arrays;
 /**
  * 希尔排序
  *
- * @param <T>
  */
-public class ShellSort<T> implements Sort<T> {
+public class ShellSort implements Sort {
 
     /**
      * @param a
      */
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         int len = a.length;
         int h = 1;
         while (h < len / 3) {
@@ -32,7 +31,7 @@ public class ShellSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new ShellSort<>();
+        Sort sort = new HeapSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

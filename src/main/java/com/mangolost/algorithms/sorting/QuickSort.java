@@ -5,15 +5,14 @@ import java.util.Arrays;
 /**
  * 快速排序
  *
- * @param <T>
  */
-public class QuickSort<T> implements Sort<T> {
+public class QuickSort implements Sort {
 
     /**
      * @param a
      */
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         int len = a.length;
         quickSort(a, 0, len - 1);
     }
@@ -23,7 +22,7 @@ public class QuickSort<T> implements Sort<T> {
      * @param left
      * @param right
      */
-    private void quickSort(Comparable<T>[] a, int left, int right) {
+    private void quickSort(Comparable<?>[] a, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -39,8 +38,8 @@ public class QuickSort<T> implements Sort<T> {
      * @param right
      * @return
      */
-    private int partition(Comparable<T>[] a, int left, int right) {
-        Comparable<T> v = a[left];
+    private int partition(Comparable<?>[] a, int left, int right) {
+        Comparable<?> v = a[left];
         int i = left + 1;
         int j = right;
         while (true) {
@@ -66,7 +65,7 @@ public class QuickSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new QuickSort<>();
+        Sort sort = new HeapSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

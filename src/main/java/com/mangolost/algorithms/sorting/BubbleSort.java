@@ -5,15 +5,14 @@ import java.util.Arrays;
 /**
  * 冒泡排序
  *
- * @param <T>
  */
-public class BubbleSort<T> implements Sort<T> {
+public class BubbleSort implements Sort {
 
     /**
      * @param a
      */
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         int len = a.length;
         for (int i = 0; i < len - 1; i++) {
             for (int j = len - 1; j > i; j--) {
@@ -25,7 +24,7 @@ public class BubbleSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new BubbleSort<>();
+        Sort sort = new BubbleSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

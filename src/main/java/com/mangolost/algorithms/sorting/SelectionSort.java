@@ -5,21 +5,20 @@ import java.util.Arrays;
 /**
  * 选择排序
  *
- * @param <T>
  */
-public class SelectionSort<T> implements Sort<T> {
+public class SelectionSort implements Sort {
 
     /**
      * @param a
      */
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         int len = a.length;
         for (int i = 0; i < len; i++) {
             int minIndex = i;
-            Comparable<T> minValue = a[minIndex];
+            Comparable<?> minValue = a[minIndex];
             for (int j = i + 1; j < len; j++) {
-                Comparable<T> nowValue = a[j];
+                Comparable<?> nowValue = a[j];
                 if (compare(nowValue, minValue) < 0) {
                     minIndex = j;
                     minValue = nowValue;
@@ -32,7 +31,7 @@ public class SelectionSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new SelectionSort<>();
+        Sort sort = new HeapSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

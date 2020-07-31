@@ -5,18 +5,16 @@ import java.util.Arrays;
 /**
  * 归并排序
  *
- * @param <T>
  */
-public class MergeSort<T> implements Sort<T> {
+public class MergeSort implements Sort {
 
-    private Comparable<T>[] aux;
+    private Comparable<?>[] aux;
 
     /**
      * @param a
      */
-    @SuppressWarnings("unchecked")
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         aux = new Comparable[a.length];
         int len = a.length;
         mergeSort(a, 0, len - 1);
@@ -28,7 +26,7 @@ public class MergeSort<T> implements Sort<T> {
      * @param right
      * @return
      */
-    private void mergeSort(Comparable<T>[] a, int left, int right) {
+    private void mergeSort(Comparable<?>[] a, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -44,7 +42,7 @@ public class MergeSort<T> implements Sort<T> {
      * @param mid
      * @param right
      */
-    private void merge(Comparable<T>[] a, int left, int mid, int right) {
+    private void merge(Comparable<?>[] a, int left, int mid, int right) {
         // Merge a[left..mid] with a[mid+1..right].
         if (right + 1 - left >= 0) {
             System.arraycopy(a, left, aux, left, right + 1 - left);
@@ -68,7 +66,7 @@ public class MergeSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new MergeSort<>();
+        Sort sort = new HeapSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

@@ -5,15 +5,14 @@ import java.util.Arrays;
 /**
  * 堆排序
  *
- * @param <T>
  */
-public class HeapSort<T> implements Sort<T> {
+public class HeapSort implements Sort {
 
     /**
      * @param a
      */
     @Override
-    public void sort(Comparable<T>[] a) {
+    public void sort(Comparable<?>[] a) {
         int len = a.length;
         for (int i = len / 2; i >= 1; i--) {
             sink(a, i, len);
@@ -30,7 +29,7 @@ public class HeapSort<T> implements Sort<T> {
      * @param i
      * @param len
      */
-    private void sink(Comparable<T>[] a, int i, int len) {
+    private void sink(Comparable<?>[] a, int i, int len) {
         while (i * 2 <= len) {
             int j = i * 2;
             if (j < len && compare(a[j - 1], a[j]) < 0) {
@@ -45,7 +44,7 @@ public class HeapSort<T> implements Sort<T> {
     }
 
     public static void main(String[] args) {
-        Sort<Integer> sort = new HeapSort<>();
+        Sort sort = new HeapSort();
 
         Integer[] a = {4, 1, 3, 6, 7, 8, 5, 9, 0, 2};
 

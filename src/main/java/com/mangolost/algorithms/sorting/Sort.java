@@ -1,23 +1,23 @@
 package com.mangolost.algorithms.sorting;
 
 /**
- * @param <T>
+ *
  */
-public interface Sort<T> {
+public interface Sort {
 
     /**
      * @param a
      */
-    void sort(Comparable<T>[] a);
+    void sort(Comparable<?>[] a);
 
     /**
      * @param a
      * @param b
      * @return
      */
-    @SuppressWarnings("unchecked")
-    default int compare(Comparable<T> a, Comparable<T> b) {
-        return a.compareTo((T) b);
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    default int compare(Comparable a, Comparable b) {
+        return a.compareTo(b);
     }
 
     /**
@@ -25,8 +25,8 @@ public interface Sort<T> {
      * @param i
      * @param j
      */
-    default void swap(Comparable<T>[] a, int i, int j) {
-        Comparable<T> temp = a[i];
+    default void swap(Comparable<?>[] a, int i, int j) {
+        Comparable<?> temp = a[i];
         a[i] = a[j];
         a[j] = temp;
     }
